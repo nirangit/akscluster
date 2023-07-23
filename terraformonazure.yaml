@@ -21,7 +21,7 @@ stages:
           inputs:
             provider: 'azurerm'
             command: 'init'
-            backendServiceArm: 'npstackro-1676009523909(1672ce61-55a1-45dc-8171-3f36cc6dfd9c)'
+            backendServiceArm: 'rgtestsvc'
             backendAzureRmResourceGroupName: '$(resourcegroup)'
             backendAzureRmStorageAccountName: '$(storageaccountname)'
             backendAzureRmContainerName: '$(containername)'
@@ -46,7 +46,7 @@ stages:
           inputs:
             provider: 'azurerm'
             command: 'init'
-            backendServiceArm: 'npstackro-1676009523909(1672ce61-55a1-45dc-8171-3f36cc6dfd9c)'
+            backendServiceArm: 'rgtestsvc'
             backendAzureRmResourceGroupName: '$(resourcegroup)'
             backendAzureRmStorageAccountName: '$(storageaccountname)'
             backendAzureRmContainerName: '$(containername)'
@@ -55,9 +55,9 @@ stages:
           inputs:
             provider: 'azurerm'
             command: 'plan'
-            environmentServiceNameAzureRM: 'npstackro-1676009523909(1672ce61-55a1-45dc-8171-3f36cc6dfd9c)'
+            environmentServiceNameAzureRM: 'rgtestsvc'
         - task: TerraformTaskV4@4
           inputs:
             provider: 'azurerm'
             command: 'apply'
-            environmentServiceNameAzureRM: 'npstackro-1676009523909(1672ce61-55a1-45dc-8171-3f36cc6dfd9c)'
+            environmentServiceNameAzureRM: 'rgtestsvc'
