@@ -36,9 +36,9 @@ resource "azurerm_kubernetes_cluster" "default" {
 
   service_principal {
 
-    client_id     = "fef95b80-356f-4e8f-ab56-2b325572b589"
+    client_id     = "47d1c5c6-634e-4cbb-bacc-f52c43062b60"
 
-    client_secret = "D1v8Q~ITVAou~8f9wBKNo~X01IBggzil2SGsEcSF"
+    client_secret = "mfw8Q~O7~gPdvEdZpAzTCHYRckLQ8zUFnENZRbdK"
 
   }
 
