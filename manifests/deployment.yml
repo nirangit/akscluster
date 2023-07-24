@@ -18,6 +18,6 @@ spec:
         app: db1
     spec:
       containers:
-      - image: ctsdemo.azurecr.io
+      - image: ctsdemo.azurecr.io/test1
         name: app
   
