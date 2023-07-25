@@ -19,7 +19,7 @@ variables:
   imagePullSecret: 'ctsdemo47fe-auth'
 
   # Agent VM image name
- # vmImageName: 'ubuntu-latest'
+ vmImageName: 'ubuntu-latest'
 
 
 stages:
@@ -29,7 +29,8 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: dev-hosted
+      vmImage: $(vmImageName)
+     # name: dev-hosted
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
@@ -52,7 +53,8 @@ stages:
   - deployment: Deploy
     displayName: Deploy
     pool:
-      name: dev-hosted
+      vmImage: $(vmImageName)
+    # name: dev-hosted
     environment: 'akscluster.default'
     strategy:
       runOnce:
